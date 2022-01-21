@@ -18,32 +18,75 @@ namespace ChallengesWithTestsMark8
 
         public double Subtract(double minuend, double subtrahend)
         {
-            throw new NotImplementedException();
+
+            var expectedDifference = minuend - subtrahend;
+            return expectedDifference;
+
+
+            //throw new NotImplementedException();
         }
 
         public int Add(int number1, int number2)
         {
-            throw new NotImplementedException();
+
+            var expectedSum = number1 + number2;
+            return expectedSum;
+
+            //throw new NotImplementedException();
         }
 
         public int GetSmallestNumber(int number1, int number2)
         {
-            throw new NotImplementedException();
+
+            if (number1 < number2)
+            {
+                return number1;
+            }
+            else if (number2 < number1)
+            {
+                return number2;
+            }
+            else if(number1 == number2)
+            {
+                return number2;
+            }
+           else
+            {
+                throw new ArgumentException();
+            }
+
+            //throw new NotImplementedException();
         }
 
         public long Multiply(long factor1, long factor2)
         {
-            throw new NotImplementedException();
+            var product = factor1 * factor2;
+            //var product = Multiply(factor1, factor2); //Refactored code option not used
+            return product;
+
+            //throw new NotImplementedException();
         }
 
         public string GetGreeting(string nameOfPerson)
         {
-            throw new NotImplementedException();
+            if (nameOfPerson == "")
+            {
+                return $"Hello!";
+            }
+            else
+            {
+                return $"Hello, {nameOfPerson}!";
+            }
+
+            //throw new NotImplementedException();
         }
 
         public string GetHey()
         {
-            throw new NotImplementedException();
+            
+            return $"HEY!";
+            
+            //throw new NotImplementedException();
         }
     }
 }
